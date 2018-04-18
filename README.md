@@ -1,4 +1,7 @@
 # PreGRUB
+A boot loader that finds GRUB on another disk and runs it (old project)
+
+Sorry for non-French speakers, perhaps one day I'll translate explanations and code comments into English.
 
 ## C'est quoi ? À quoi ça sert ?
 
