@@ -1,5 +1,5 @@
 # PreGRUB
-A boot loader that finds GRUB on another disk and runs it (old project)
+A boot loader that finds GRUB on another disk and runs it (old project).
 
 Sorry for non-French speakers, perhaps one day I'll translate explanations and code comments into English.
 
@@ -31,5 +31,4 @@ Le petit hic dans tout ça, c'est qu'en l'état actuel PreGRUB ne fait pas de 2�
   cmp ax,0x4255                ;"UB"
   jnz rech
 ```
-L'offset est ici 0x0188, mais ça change à chaque mise à jour de GRUB. Il faut donc manuellement, quand le cas se présente, chercher le bon offset en étudiant le 1er secteur occupé par GRUB, puis réécrire notre MBR PreGRUB avec la bonne valeur.
-
+L'offset est ici 0x0188 (et 0x018a), mais ça peut éventuellement changer lors d'une MAJ de GRUB. Il faut donc manuellement, si le cas se présente, chercher le bon offset en étudiant le 1er secteur occupé par GRUB, puis réécrire notre MBR PreGRUB avec la bonne valeur.
